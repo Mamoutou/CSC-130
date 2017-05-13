@@ -1,0 +1,79 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin:0;
+}
+
+
+nav {
+ background-color: hsl(210, 100%, 66%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 40px;
+  display:flex;
+  justify-content: space-around;
+  width:100%;
+  top:0;
+  box-shadow: 5px 5px 10px;
+  position: fixed;
+}
+
+article {
+  padding: 20px;
+  text-align: justify;
+}
+
+aside {
+  background-color: #9797d4;
+  padding: 20px;
+}
+main {
+  margin-top: 40px;
+}
+nav a {
+  background-color: hsl(210, 100%, 70%);
+  border: 2px solid hsl(210, 100%, 60%);
+  color: black;
+  display: inline-block;
+  font-size: large;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  
+}
+
+nav a:hover { 
+  background-color:  hsl(210, 100%, 90%);
+  box-shadow: 5px 5px 10px;
+}
+
+.anchor {
+  display: block;
+  height: 40px; /*same height as header*/
+  margin-top: -40px; /*same height as header*/
+  visibility: hidden;
+}
+
+@media screen and (min-width: 480px) {
+  /* Add your CSS rule-sets here */
+  .hidden-desktop {
+    display: none; 
+  }
+  nav a#n1 {
+    display: none; 
+  } 
+   main {
+     display: flex;
+   }
+  #sidebar {
+    width: 200px;
+    height: 50%;
+    flex-shrink: .1; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+    /* Add your CSS rule-sets here */
+    .hidden-mobile {
+      display: none; 
+    }
+}
